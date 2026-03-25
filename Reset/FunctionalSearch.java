@@ -1,17 +1,20 @@
-public static boolean search(int[] numbers, int target){
+public static int search(int[] numbers, int target){
+
+            int count = 0;
 
     for (int number : numbers) {
+
         if (number == target) {
-            return true;
+            count++;
         }
     }
-		return false;
+		return count;
 }
 
 
 
 void main() {
-	int[] numbers = {5, 10, 15, 20, 25};
+	int[] numbers = {5, 10, 15, 20, 25, 20};
 
     System.out.println(search(numbers, 20));
 }
